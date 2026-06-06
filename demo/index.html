@@ -1,17 +1,47 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="icon" type="image/png" />
-    <title>Rekhta downloader</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rekhta Book Downloader</title>
+    <link rel="stylesheet" href="./styles.css" />
     <script src="./index.js" type="module"></script>
 </head>
-
 <body>
-    <form id="download-form">
-        <input type="text" name="url" placeholder="Enter the url"
-            value="https://www.rekhta.org/ebooks/bela-mein-mela-gadar-ki-mari-shahzadiyan-rashidul-khairi-ebooks?lang=ur" />
-        <input type="submit" value="Download" />
-    </form>
-</body>
+    <main class="page">
+        <header>
+            <h1>Rekhta Book Downloader</h1>
+            <p>Paste a Rekhta ebook URL and download the full book as a PDF to your computer.</p>
+        </header>
 
+        <section class="card">
+            <form id="download-form">
+                <label>
+                    Rekhta ebook URL
+                    <input
+                        type="url"
+                        name="url"
+                        required
+                        placeholder="https://www.rekhta.org/ebooks/..."
+                        value="https://www.rekhta.org/ebooks/bela-mein-mela-gadar-ki-mari-shahzadiyan-rashidul-khairi-ebooks?lang=ur"
+                    />
+                </label>
+                <button type="submit" id="submit-btn">Download as PDF</button>
+            </form>
+
+            <div class="progress" id="progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-label" id="progress-label"></div>
+            </div>
+
+            <div class="status" id="status"></div>
+
+            <p class="hint">
+                Run locally with <code>npm start</code>, then open the URL shown in your terminal.
+            </p>
+        </section>
+    </main>
+</body>
 </html>
