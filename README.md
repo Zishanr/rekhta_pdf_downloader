@@ -1,6 +1,7 @@
 # rekhta-downloader-js
 
 Downloader for Rekhta books — paste an ebook URL and save the full book as a PDF.
+Reference - https://github.com/inshapardaz/rekhta-downloader-js
 
 [![Node.js Package](https://github.com/inshapardaz/rekhta-downloader-js/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/inshapardaz/rekhta-downloader-js/actions/workflows/npm-publish.yml)
 
